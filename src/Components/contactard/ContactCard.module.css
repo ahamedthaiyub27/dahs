@@ -1,0 +1,84 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  min-height: 100vh;
+}
+
+.contactCard {
+  background: linear-gradient(135deg, #ffffff, #f1f8e9);
+  padding: 30px 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(76, 175, 80, 0.15);
+  border: 1px solid #d0e9d4;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(76, 175, 80, 0.25);
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5cff64;
+  margin-bottom: 18px;
+  padding: 10px 12px;
+  background-color: #eafaf1;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.infoItem:hover {
+  background: #d2f0dd;
+}
+
+.icon {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contactCard {
+    padding: 25px 20px;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+
+  .infoItem {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}

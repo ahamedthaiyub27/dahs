@@ -1,0 +1,417 @@
+/* Cards.module.css */
+
+/* Card Grid Layout */
+.overallcard {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+    background-color: #f8faf8;
+    min-height: calc(100vh - 120px);
+}
+
+/* Individual Card */
+.overall {
+    position: relative;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 0;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.1);
+    overflow: hidden;
+    border: 1px solid #e8f5e9;
+}
+
+.overall:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(46, 125, 50, 0.15);
+}
+
+/* Image Container */
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 20px 20px 0 0;
+}
+
+.overall:hover .image {
+    transform: scale(1.05);
+}
+
+/* Badges */
+.popularBadge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fireIcon {
+    font-size: 14px;
+}
+
+.ratingBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.starIcon {
+    color: #FFEB3B;
+    font-size: 14px;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+}
+
+.title {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #2E7D32;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description {
+    font-size: 14px;
+    color: #616161;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Price Section */
+.pricecontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2E7D32;
+    margin: 0;
+}
+
+.originalPrice {
+    font-size: 16px;
+    color: #9E9E9E;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+/* Add Button */
+.addButton {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.addButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+}
+
+.plusIcon {
+    color: white;
+    font-size: 16px;
+}
+
+/* Compact Form Styles */
+.formOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.addForm {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.15);
+    border: 1px solid #e8f5e9;
+}
+
+.addForm h2 {
+    margin: 0 0 15px 0;
+    color: #2E7D32;
+    text-align: center;
+    font-size: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2E7D32;
+    font-size: 14px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #C8E6C9;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f1f8e9;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.formGroup textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.formFooter p {
+    margin: 0;
+    color: #757575;
+    font-size: 13px;
+}
+
+.submitButton {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.submitButton:hover {
+    background: linear-gradient(135deg, #3d8b40, #57a358);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+}
+
+.submitButton:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f1f8e9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #2E7D32;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+    background: #e8f5e9;
+    transform: rotate(90deg);
+}
+
+.category {
+    color: #4CAF50;
+    font-weight: 600;
+    margin: 5px 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overallcard {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .imageContainer {
+        height: 160px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .addForm {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overallcard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+        margin-left: 5%;
+    }
+
+    .imageContainer {
+        height: 140px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .formFooter {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overall {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.overall:nth-child(1) { animation-delay: 0.1s; }
+.overall:nth-child(2) { animation-delay: 0.2s; }
+.overall:nth-child(3) { animation-delay: 0.3s; }
+.overall:nth-child(4) { animation-delay: 0.4s; }
+.overall:nth-child(5) { animation-delay: 0.5s; }
+.overall:nth-child(6) { animation-delay: 0.6s; }
+
+/* Top Bar Styles */
+.topBar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px 0;
+    margin-left: 10%;
+}
+
+.addMenuButton {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    font-size: 16px;
+}
+
+.addMenuButton:hover {
+    background: linear-gradient(135deg, #3d8b40, #57a358);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+}
+
+.addMenuIcon {
+    font-size: 16px;
+}

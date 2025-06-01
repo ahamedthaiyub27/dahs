@@ -1,0 +1,132 @@
+.container {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #e3f2fd);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  width: 95%;
+  max-width: 1200px;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.tableCard {
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  border-radius: 18px;
+  padding: 10px 1.4rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  border-left: 6px solid transparent;
+  user-select: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.tableCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tableCard.active {
+  border-left-color: #43a047;
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.tableCard.inactive {
+  border-left-color: #bdbdbd;
+  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+  color: #757575;
+}
+
+.addCard {
+  border: 2.5px    #bbb;
+  background: repeating-linear-gradient(
+    45deg,
+    #fafafa,
+    #fafafa 10px,
+    #f0f0f0 10px,
+    #f0f0f0 20px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  color: #888;
+  cursor: pointer;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.addCard:hover {
+  background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+  border-color: #999;
+  transform: scale(1.1);
+  color: #555;
+}
+
+.details,
+.form {
+  margin-top: 2.5rem;
+  background: linear-gradient(to bottom, #ffffff, #f7faff);
+  padding: 2rem 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  color: #333;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3a86ff;
+  box-shadow: 0 0 8px 3px rgba(58, 134, 255, 0.3);
+  background: #fff;
+}
+
+button {
+  background: linear-gradient(135deg, #3a86ff, #0077ff);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(58, 134, 255, 0.5);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #265df2, #005be0);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(38, 93, 242, 0.65);
+}

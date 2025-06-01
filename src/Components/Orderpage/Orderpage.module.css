@@ -1,0 +1,167 @@
+.container {
+  margin-left: 15%;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  width: 80%;
+}
+
+.orderMainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.orderCard {
+  width: 280px;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.orderCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.processing {
+  background: linear-gradient(135deg, #f9d976, #f39f5a); /* Elegant orange gradient */
+}
+
+.done {
+  background: linear-gradient(135deg, #b0f3b7, #58d68d); /* Clean, calm premium green */
+}
+
+.notPickedUp {
+  background: linear-gradient(135deg, #dfe9f3, #bcccdc); /* Subtle blue-gray for neutrality */
+}
+
+.cancelled {
+  background: linear-gradient(135deg, #f88c8c, #d73833); /* Elegant but clear red tones */
+}
+
+.readyPickup {
+  background: linear-gradient(135deg, #ffe259, #ffa751); /* Energetic and positive golden-orange */
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.orderId {
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.orderType {
+  font-size: 0.75rem;
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.time {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 4px 0 8px;
+}
+
+.subStatus {
+  font-size: 0.82rem;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  color: #222;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.itemCount {
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.itemList {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.itemList li {
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.itemList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-size: 1rem;
+}
+
+
+.footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+.statusText {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.statusText:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+
+select {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #ff0000;
+}
