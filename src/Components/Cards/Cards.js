@@ -17,7 +17,7 @@ const Cards = () => {
 
   const fetchdatamenu = async () => {
     try {
-      const res = await fetch('http://localhost:8000/menu/allmenu');
+      const res = await fetch('https://backangular-production.up.railway.app/menu/allmenu');
       const data = await res.json();
       setMenudata(data);
     } catch (error) {
@@ -41,7 +41,7 @@ const Cards = () => {
     e.preventDefault();
     setIsAdding(true);
     try {
-      const response = await fetch('http://localhost:8000/menu/postmenu', {
+      const response = await fetch('https://backangular-production.up.railway.app/menu/postmenu', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newItem)
