@@ -37,7 +37,7 @@ const Dash = () => {
   useEffect(() => {
     const fetchOrders = () => {
       axios
-        .get('http://localhost:8000/get')
+        .get('https://backangular-production.up.railway.app/get')
         .then((response) => setOrders(response.data))
         .catch((err) => console.error('Error fetching orders:', err));
     };
