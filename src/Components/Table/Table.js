@@ -11,7 +11,7 @@ const Table = () => {
   useEffect(() => {
     const fetchTables = async () => {
       try {
-        const response = await fetch('http://localhost:8000/get');
+        const response = await fetch('https://backangular-production.up.railway.app/get');
         const data = await response.json();
 
         const uniqueTables = [];
