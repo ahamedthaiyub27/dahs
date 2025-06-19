@@ -6,7 +6,7 @@ const Orderpage = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch('http://localhost:8000/get');
+      const res = await fetch('https://backangular-production.up.railway.app/get');
       const data = await res.json();
       setOrders(data);
     } catch (error) {
